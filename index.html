@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./solon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="font-awesome\css\font-awesome.css">
+    <title>Portfolio &trade;</title>
+    <style>
+        @font-face {
+            font-family: Poppins;
+            src: url(./Font/Poppins-Bold.ttf);
+        }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Poppins, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    body{
+        background-image: url(./Pic/b1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        /* background-color: lightblue; */
+        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);;
+    }
+
+
+    /* Left Side */
+    header > .leftSide {
+        display: flex;
+        align-items: center;
+    }
+
+
+    header > .leftSide > .imgHolder{
+        height: 50px;
+        width: 50px;
+        background-color: grey;
+        border-radius: 50%;
+        margin-right: 10px;
+        background-image: url(./solon.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .leftSideElement{
+        position: relative;
+        top: -100px;
+        transition: .4s ease;
+    }
+
+
+    /* Right Side */
+
+    header > .rightSide > nav {
+         display: flex;
+         align-items: center;
+         height: 100%;
+    }
+
+    header > .rightSide > nav > a {
+        display: block;
+        text-decoration: none;
+        padding: 8px 10px;
+        margin-right: 10px;
+        color: black;
+        position: relative;
+        top: -50px;
+        transition: .4s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    header > .rightSide > nav > a > .aSpan{
+        content : '';
+        position: absolute;
+        width: 100%;
+        height: 0%;
+        background-color: rgba(0,0,0,0.5);
+        transition: .4s ease;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    header > .rightSide > nav > a:hover  .aSpan{
+        
+        height: 100%;
+    }
+
+
+
+    header > .rightSide > nav > a:hover{
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+    }
+
+
+    /* Main */
+
+    main{
+        display: flex;
+
+        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);;
+        /* margin: 100px; */
+        height: calc(100dvh - 200px);
+        margin: 99px;
+        width: 80dvw;
+        margin: 100px auto;
+        /* height:100dvh; */
+        border-radius: 10px;
+
+        
+    }
+
+    main > .leftSide{
+        /* background-color: red; */
+        width: 50%;
+        /* height: 100dvh; */
+        height: 100%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+       
+    }
+   
+    main > .leftSide > .imageHolder {
+        height: 30dvw;
+        aspect-ratio: 1;
+        background-color: grey;
+        border-radius: 50%;
+    }
+
+    main > .rightSide {
+        width: 50%;
+        /* height: 100dvh; */
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        overflow-x: hidden;
+
+       
+        /* align-items: center; */
+    }
+
+    main > .rightSide > h1{
+        width: 100%;
+        /* background-color: red; */
+        padding-left: 0px;
+        font-size: 4em;
+        margin-bottom: 20px;
+    }
+
+    main > .rightSide > button{
+        background-image: linear-gradient(90deg, red, magenta);
+        outline: none;
+        border: none;
+        padding: 10px;
+        width: max-content;
+        margin-top: 20px;
+    }
+
+    .mainLeftSideElement{
+        position: relative;
+        left: -50dvw;
+        transition: .4s ease;
+    }
+
+    .mainRightSideElement{
+        position: relative;
+        right: -50dvw;
+        transition: .4s ease;
+    }
+
+    .secondMainLeftSideElement{
+        position: relative;
+        right: -50dvw;
+        transition: .4s ease;
+    }
+
+    .secondMainRightSideElement{
+        position: relative;
+        left: -50dvw;
+        transition: .4s ease;
+    }
+
+    .rightSideContact{
+        position: relative;
+        right: -50dvw;
+        transition: .4s ease;
+    }
+
+    .leftSideContact{
+        position: relative;
+        left: -50dvw;
+        transition: .4s ease;
+    }
+
+    .infoRight{
+        position: relative;
+        right: -50dvw;
+        transition: .4s ease;
+    }
+
+    .infoLeft{
+        position: relative;
+        left: -50dvw;
+        transition: .4s ease;
+    }
+
+    .infoRight1{
+        position: relative;
+        right: -50dvw;
+        transition: .4s ease;
+    }
+
+    .infoLeft1{
+        position: relative;
+        left: -50dvw;
+        transition: .4s ease;
+    }
+
+
+    .toAbsolute .leftSide{
+        position: relative;
+        top: -100dvh;
+        transition: .4s ease;
+    }
+
+    .toAbsolute .rightSide{
+        position: relative;
+        bottom: -100dvh;
+        transition: .4s ease;
+    }
+
+    /* project section */
+
+    .projectSection{
+        position: relative;
+        left: -100dvw;
+        transition: .4s ease;
+        width: 80dvw;
+        margin: 0 auto;
+
+        
+    }
+    .projectSection > h1{
+        font-size: 2.5em;
+        text-align: center;
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .projectSectionHolder{
+        height: 90dvh;
+        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);;
+        /* background: red; */
+        /* width: 100%; */
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .projectSectionHolder > .myProjectBox{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 200px;
+        /* background-color: lightblue; */
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        transition: .4s ease;
+        PADDING: 10px;
+        
+    }
+
+    .projectSectionHolder > .leftButton{
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        top: 50%;
+        left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        transition: .4s ease;
+    }
+
+    .projectSectionHolder > .leftButton  i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+    }
+
+    .projectSectionHolder > .leftButton  i:hover{
+        background-color: rgba(0, 0, 0, 0.5);
+        color:white;
+    }
+
+    .projectSectionHolder > .rightButton{
+        position: absolute;
+        height: 50px;
+        width: 50px;
+       
+        top: 50%;
+        right: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        transition: .4s ease;
+    }
+
+    .projectSectionHolder > .rightButton  i{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+    }
+
+    .projectSectionHolder > .rightButton i:hover{
+        background-color: rgba(0, 0, 0, 0.5);
+        color:white;
+    }
+
+    #workSection{
+        position: relative;
+        right: -100dvw;
+        transition: .4s ease;
+        overflow: hidden!important;
+        /* width: 100; */
+        /* border: 2px solid black; */
+
+        margin: 100px;
+        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);;
+    }
+
+    #workSection > h1{
+        font-size: 2.5em;
+        text-align: center;
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+    } 
+
+    #workSection button{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+
+        padding: 10px 12px;
+        font-weight: bold;
+        background-image: linear-gradient(90deg, magenta, red);
+        border: none;
+        font-size: 2.5em;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        transition: .4s ease;
+    }
+
+    #workSection button:hover{
+        background-image: linear-gradient(90deg, rgba(255, 0, 255, 0.8), rgba(255, 0, 0, 0.8));
+    }
+
+    #workSection button:active{
+        background-image: linear-gradient(90deg, rgba(255, 0, 255, 0.5), rgba(255, 0, 0, 0.5));
+        border: 2px solid magenta;
+        
+    }
+
+    .workSectionHolder{
+        height: 90dvh;
+        /* background-color: lightcyan; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .workSectionHolder > .workBoxHolder {
+        width: 300px;
+        height: 400px;
+        /* background-color: lightblue; */
+        position: relative;
+    }
+
+    .workSectionHolder > .workBoxHolder > .workBox{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: .4s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .workSectionHolder > .workBoxHolder > .workBox > img{
+        width: 100%;
+        height: auto;
+    }
+
+  
+
+
+
+    
+
+    #first{
+        opacity: 0.1;
+        transition: 1s ease-in-out;
+        position: relative;
+        top: -100dvh;
+    }
+
+
+
+
+    .second{
+        flex-direction: row-reverse;
+        transition: .4s ease;
+        transform: scale(0);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .toAbsolute{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 10px 50px;
+        top: -100dvh;
+        transition: .4s ease;
+        overflow: hidden;
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+                /* position: relative; */
+    }
+
+    .btnAbsolute{
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        border-radius: 10px;
+        transition: .4s ease;
+
+    }
+
+    .btnAbsolute:hover{
+        border-radius: 50%;
+        color: white;
+    }
+
+
+    .toAbsolute > h1{
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    .toAbsoluteContent {
+        display: flex;
+        height: 90%;
+        width: 80%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .toAbsolute  .rightSide{
+        width: 50%;
+        height: 100%;
+        /* background-color: lightblue; */
+        background-color: rgba(255, 255, 255, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        overflow: hidden;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+    }
+
+    .toAbsolute  .leftSide{
+        width: 50%;
+        height: 100%;
+        /* background-color: lightgreen; */
+        background-color: rgba(255, 255, 255, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+        overflow: hidden;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+    }
+
+    .toAbsolute .infoHolder {
+        padding: 8px 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(0, 0, 0, 0.09);
+        margin-bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+    }
+    
+
+    /* <!-- My loader --> */
+
+    .myAnimation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .myAnimation span {
+        font-family: Poppins, "Trebuchet MS", "Lucida Sans Unicode",
+            "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+        font-weight: 800;
+        font-size: 6em;
+        margin-right: 25px;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+        transition: 500ms ease-out;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+
+    }
+    .myLoader {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        overflow: hidden;
+        backdrop-filter: blur(3px);
+    }
+
+    #wholeContent {
+        display: none;
+        overflow:hidden
+    }
+
+    #first{
+        transition: .4s ease-in-out!important;
+    }
+
+    .invisible{
+        visibility: hidden!important;
+    }
+
+    .iFrameSection{
+       position: relative;
+       height: 50dvh;
+        overflow: auto;
+    }
+
+    .iFrameSection > .iframeHolder   {
+        position: absolute;
+        height: 90%;;
+        width: 90dvw;
+        background-color: lightpink;
+        border-radius: 10px;
+    }
+
+
+    /* Contact US */
+
+    .contactUS{
+            height: 90dvh;
+            width: 80dvw;
+            margin: 20px auto;
+            background-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);;
+            /* border-radius: 20px; */
+
+            position: relative;
+            bottom: -100dvh;
+            transition: .4s ease;
+
+            overflow: hidden;
+        }
+        .contactUS > h1{
+            text-align: center;
+            font-size: 2.5em;
+        }
+
+        .contactUS > .contactUsContent{
+            display: flex;
+            overflow: hidden;
+        }
+
+        .contactUS > .contactUsContent > .leftSide{
+            width: 50%;
+            height: 90dvh;
+            /* background-color: lightgreen; */
+            display:  flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .contactUS > .contactUsContent > .leftSide > iframe{
+            width: 50%;
+            aspect-ratio: 1;
+            background-color: grey;
+        }
+
+        .contactUS > .contactUsContent > .rightSide{
+            width: 50%;
+            height: 90dvh;
+            /* background-color: lightgreen; */
+            display:  flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* .contactUS > .contactUsContent > .rightSide > h1{
+            width: 100%;
+            text-align: left;
+        } */
+
+        .contactUS > .contactUsContent > .rightSide > form{
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.511);
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.09);
+            backdrop-filter: blur(10px);
+            max-width: 400px;
+        }
+
+        .contactUS > .contactUsContent > .rightSide > form input[type = email],
+        .contactUS > .contactUsContent > .rightSide > form textarea {
+            padding: 8px 10px;
+            border: none;
+            /* border-bottom: 2px solid red; */
+            background: rgba(128, 128, 128, 0.224);
+
+        }
+
+        .contactUS > .contactUsContent > .rightSide > form input[type = submit]{
+            background-color: rgba(0,0,0,0.3);
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 8px 10px;
+            margin-top: 20px;
+            border: none;
+            background-image: linear-gradient(90deg, red, magenta);
+        }
+
+        .contactUS > .contactUsContent > .rightSide > form input[type = submit]:hover{
+            background-color: rgba(0,0,0,0.2);
+            color: white;
+        }
+
+        textarea{
+            height: 200px
+        }
+
+        footer{
+            text-align: center;
+        }
+
+
+        .youtube{
+            width: max-content;
+            margin: 0 auto;
+            padding: 10px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.09);
+            background-color: rgba(247, 213, 218, 0.697);
+            backdrop-filter: blur(4px);
+        }
+
+        .imageMap{
+            width: max-content;
+            margin: 0 auto;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.09);
+            background-color: rgba(247, 213, 218, 0.697);
+            backdrop-filter: blur(4px);
+        }
+
+        .entities{
+            width: 400px;
+            margin: 0 auto;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.09);
+            padding: 10px;
+            background-color: rgba(247, 213, 218, 0.697);
+            backdrop-filter: blur(4px);
+        }
+
+        #bryanPic{
+            background-image: url(./Pic/profile.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            background-size: cover;
+        }
+
+        #missionPic{
+            background-image: url(./Pic/mission.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            background-size: cover;
+        }
+
+
+        .projectSectionHolder > .myProjectBox > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .second .rightSide{
+            padding-left: 50px;
+        }
+        
+        .second .rightSide h1{
+            font-size: 3.7em
+
+        }
+       
+
+
+    </style>
+</head>
+<body onscroll="myScrollListener(event)">
+
+    <div class="myLoader" id="myLoader">
+        <div class="myAnimation" id="myAnimation">
+             <span>L</span>
+             <span>O</span>
+             <span>A</span>
+             <span>D</span>
+             <span>I</span>
+             <span>N</span>
+             <span>G</span>
+             <span>.</span>
+             <span>.</span>
+             <span>.</span>
+        </div>
+   </div>
+
+   <div id="wholeContent">
+
+        <header>
+            <div class="leftSide">
+                <div class="imgHolder leftSideElement"></div>
+                <p class="leftSideElement">Portfolio</p>
+            </div>
+            <div class="rightSide">
+                <nav>
+                    <a href="#aboutUs" class="myLinks">About Us <span class="aSpan"></span> </a>
+                    <a href="#projectSection" class="myLinks">Projects <span class="aSpan"></span></a>
+                    <a href="#contactUS" class="myLinks">Contact Us <span class="aSpan"></span></a>
+                </nav>
+            </div>
+        </header>
+        <main id="first" id="aboutUs">
+            <!-- / About us -->
+            <section class="leftSide">
+                <div class="imageHolder mainLeftSideElement" id="bryanPic"></div>
+            </section>
+            <section class="rightSide">
+                <h1 class="mainRightSideElement">BRYAN S. SOLON</h1>
+                <article class="mainRightSideElement">I'm a 1<sup>st</sup> student taking up Bachelor of Science Information Technology in Cebu Easter College. I an aspiring full-stack web developer.
+                </article>
+
+                <button class="mainRightSideElement" onclick="showLeftRight(this)">SEE DETAILS</button>
+            </section>
+
+            <section class="toAbsolute" id="toAbsolute">
+                <div class="btnAbsolute" onclick="removeStylingInfo(this)">
+                    <i class="fa fa-arrow-left"></i>
+                </div>
+                <h1>About Me</h1>
+                 <div class="toAbsoluteContent">
+                    <div class="leftSide"  id="aboutMeLeft">
+                        <p class="infoHolder infoLeft">Name</p>
+                        <p class="infoHolder infoLeft">Address</p>
+                        <p class="infoHolder infoLeft">Status</p>
+                        <p class="infoHolder infoLeft">Sex</p>
+                        <p class="infoHolder infoLeft">Email</p>
+                        <p class="infoHolder infoLeft">Contact #</p>
+                    </div>
+                    <div class="rightSide" id="aboutMeRight">
+                        <p class="infoHolder infoRight">Bryan S. Solon</p>
+                        <p class="infoHolder infoRight">Sitio Patag, Brgy. Guba, Cebu City, 6000</p>
+                        <p class="infoHolder infoRight">Single</p>
+                        <p class="infoHolder infoRight">Male</p>
+                        <p class="infoHolder infoRight">solonbryan54@gmail.com</p>
+                        <p class="infoHolder infoRight">0998 207 2109</p>
+                    </div>
+                </div>
+            </section>
+            <!-- About us /-->
+
+            
+        </main>
+
+        <main class="second" id="second">
+            <!-- / About us -->
+            <section class="leftSide">
+                <div class="imageHolder secondMainLeftSideElement" id="missionPic"></div>
+            </section>
+            <section class="rightSide">
+                <h1 class="secondMainRightSideElement">DENNESE FAITH MISSION</h1>
+                <article class="secondMainRightSideElement">IT Student. Lord Servant.
+                </article>
+
+                <button class="secondMainRightSideElement" onclick="showLeftRight1(this)">SEE DETAILS</button>
+            </section>
+
+            <section class="toAbsolute" id="toAbsolute1">
+                <div class="btnAbsolute" onclick="removeStylingInfo1(this)">
+                    <i class="fa fa-arrow-left"></i>
+                </div>
+                <h1>About Me</h1>
+                 <div class="toAbsoluteContent">
+                    <div class="leftSide"  id="aboutMeLeft1">
+                        <p class="infoHolder infoLeft1">Name</p>
+                        <p class="infoHolder infoLeft1">Address</p>
+                        <p class="infoHolder infoLeft1">Status</p>
+                        <p class="infoHolder infoLeft1">Sex</p>
+                        <p class="infoHolder infoLeft1">Email</p>
+                        <p class="infoHolder infoLeft1">Contact #</p>
+                    </div>
+                    <div class="rightSide" id="aboutMeRight1">
+                        <p class="infoHolder infoRight1">Dennesse Faith Mission</p>
+                        <p class="infoHolder infoRight1">Basak Pardo, Cebu City</p>
+                        <p class="infoHolder infoRight1">Single</p>
+                        <p class="infoHolder infoRight1">Male</p>
+                        <p class="infoHolder infoRight1">dennessemission@gmail.com</p>
+                        <p class="infoHolder infoRight1">0923 2848 2440</p>
+                    </div>
+                </div>
+            </section>
+            <!-- About us /-->
+
+            
+        </main>
+
+        <div class="projectSection" id="projectSection">
+            <!-- /  Projects -->
+             <h1>Mission's Affiliation</h1>
+            <section class="projectSectionHolder">
+                <div class="myProjectBox">
+                    <img src="./mission/C-CIMPEL.png" alt="" id="pic1">
+                    <h1>C-CIMPEL</h1>
+                </div>
+                <div class="myProjectBox">
+                    <img src="./mission/Child Rights Advocate.png" alt="" id="pic2">
+                    <h1>Child Rights Advocate</h1>
+                </div>
+                <div class="myProjectBox">
+                    <img src="./mission/Digital Communication Ministry.png" alt="" id="pic3">
+                    <h1>Digital Communication Ministry</h1>
+                </div>
+                <div class="myProjectBox">
+                    <img src="./mission/Extraordinary Ministers of Holy Communion.png" alt="" id="pic4">
+                    <h1>Extraordinary Ministers of Holy Communion</h1>
+                </div>
+                <div class="myProjectBox">
+                    <img src="./mission/Liturgical Arts and Environment Ministry.png" alt="" id="pic5">
+                    <h1>Liturgical Arts and Environment Ministry</h1>
+                </div>
+                <div class="myProjectBox">
+                    <img src="./mission/Ministry of Altar Server.png" alt="" id="pic6">
+                    <h1>Ministry of Altar Server</h1>
+                </div>
+                <div class="myProjectBox">
+                    <img src="./mission/Ministry of Lectors.png" alt="" id="pic7">
+                    <h1>Ministry of Lectors</h1>
+                </div>
+                <div class="myProjectBox">
+                    <img src="./mission/Parish Caritas.png" alt="" id="pic8">
+                    <h1>Parish Caritas</h1>
+                </div>
+
+                <div class="leftButton" onclick="minusAnimation()" id="leftButton">
+                    <i class="fa fa-arrow-left"></i>
+                </div>
+                <div class="rightButton" onclick="addAnimation()" id="rightButton">
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+            </section>
+            <!-- Projects / -->
+        </div>
+
+
+        <div class="workSection" id="workSection" >
+            <h1>Works</h1>
+            <button onclick="removeRelative(this)"> Show Work</button>
+            <!-- <button onclick="lineUp()">Line up</button> -->
+            <section class="workSectionHolder" id="workSectionHolder" >
+                <div class="workBoxHolder">
+                    <div class="workBox">
+                        <img src="./Pic/picture_1.jpg" alt="">
+                    </div>
+                    <div class="workBox">
+                        <img src="./Pic/Picture_2.jpg" alt="">
+                    </div>
+                    <div class="workBox">
+                        <img src="./Pic/Picture_3.jpg" alt="">
+                    </div>
+                    <div class="workBox">
+                        <img src="./Pic/Picture_4.jpg" alt="">
+                    </div>
+                    <div class="workBox">
+                        <img src="./Pic/Picture_5.jpg" alt="">
+                    </div>
+                    <div class="workBox">
+                        <img src="./Pic/Picture_6.jpg" alt="">
+                    </div>
+                    <div class="workBox">
+                        <img src="./Pic/practice1.jpg" alt="">
+                    </div>
+                    <div class="workBox">
+                        <img src="./Pic/p3.jpg" alt="">
+                    </div>
+                    <div class="workBox invisible">8</div>
+                </div>  
+            
+                
+            </section>
+        </div>
+
+       
+
+        <section class="contactUS" id="contactUS">
+            <h1>Contact Us</h1>
+            <div class="contactUsContent">
+                <div class="leftSide">
+                    <h1 class="leftSideContact">University Map</h1>
+                    <iframe class="leftSideContact" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.5917811999016!2d123.89343661110274!3d10.294438167855668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99bfcc60d650d%3A0x5ee73506c68dd233!2sCebu%20Eastern%20College%20Cebu%20city!5e0!3m2!1sen!2sph!4v1742160366088!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="rightSide">
+                    <h1 class="rightSideContact">Any Inquiries?</h1>
+
+                    <form action="#" class="rightSideContact">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Enter email" required autocomplete="off" >
+
+                        <label for="messageContent">Message</label>
+                        <textarea name="messageContent" id="messageContent" placeholder="Enter Message here" required></textarea>
+
+                        <input type="submit" value="SUBMIT">
+                    </form>
+                </div>
+            </div>
+            
+
+        </section>
+
+
+        <section class="others">
+
+            <aside class="youtube">
+                <h2>Youtube</h2>
+                
+                <iframe width="420" height="315"
+                src="https://www.youtube.com/embed/itwco8_yV2k">
+                </iframe>
+            </aside>
+
+            
+
+            <aside class="entities">
+                <h2>Reserved Entities</h2>
+                <p>&lt; &gt; &amp;</p>
+                <h2>Symbol Entities</h2>
+                <p>&pound; &yen; &sect;</p>
+                <h2>Emoji</h2>
+                <p>&#128516; &#128517; &#128518;</p>
+            </aside>
+
+            <aside class="imageMap">
+                <h1>Image Map</h1>
+                <img src="setup.jpg" usemap="#image_map">
+                <map name="image_map">
+                <area alt="Monitor" title="Monitor" href="https://i.etsystatic.com/51791719/r/il/20479b/5972667855/il_1080xN.5972667855_e3xn.jpg" coords="334,97 869,99 867,320 340,322 336,183 " shape="polygon">
+                <area alt="Keyboard" title="Keyboard" href="https://i.etsystatic.com/31515693/r/il/e8a93f/3832715016/il_570xN.3832715016_neuj.jpg" coords="347,467 339,539 634,546 633,468 633,466 " shape="polygon">
+                <area alt="Mouse" title="Mouse" href="https://i.etsystatic.com/17118075/r/il/c9fcc2/4864944209/il_fullxfull.4864944209_8hkw.jpg" coords="783,491 810,505 809,532 775,534 767,502 772,501 " shape="polygon">
+                <area alt="Headset" title="Headset" href="https://i.etsystatic.com/6662347/r/il/486224/1750490213/il_fullxfull.1750490213_qxvo.jpg" coords="849,384 896,381 958,384 977,403 975,435 925,453 879,461 852,438 843,408 840,408 " shape="polygon">
+                </map>
+            </aside>
+            
+        </section>
+
+        <footer>
+            &copy; 2025 All Rights Reserved &bullet; Bryan Solon &amp; Dennesse Faith Mission
+        </footer>
+
+    </div>
+</body>
+<script>
+
+    // for about us animation ---------------------------------
+
+    // This is for my navigation - header part
+    function showLinks(){
+        let myLinkss = document.getElementsByClassName('myLinks');
+
+        let time = 750;
+
+        for (const myLinks of myLinkss) {
+            setTimeout(function(){
+                myLinks.style.top = "0px";
+            }, time);
+            time -= 125;
+        }
+    }
+
+
+    function showleftSideElement(){
+        let leftSideElements = document.getElementsByClassName('leftSideElement');
+
+        let time = 500;
+
+        for (const leftSideElement of leftSideElements) {
+            setTimeout(function(){
+                leftSideElement.style.top = "0px";
+            }, time);
+            time += 125;
+          
+        }
+    }
+
+    // This is for my first about us
+    function showmainLeftSideElement(){
+        let mainLeftSideElements = document.getElementsByClassName('mainLeftSideElement');
+
+        let time = 500;
+
+        for (const mainLeftSideElement of mainLeftSideElements) {
+            setTimeout(function(){
+                mainLeftSideElement.style.left = "0px";
+            }, time);
+            time += 125;
+        
+        }
+    }
+
+
+    function showmainRightSideElement(){
+        let mainRightSideElements = document.getElementsByClassName('mainRightSideElement');
+
+        let time = 750;
+
+        for (const mainRightSideElement of mainRightSideElements) {
+            setTimeout(function(){
+                mainRightSideElement.style.right = "0px";
+            }, time);
+            time -= 125;
+        }
+    }
+
+    function removeStylingFirst(){
+        let mainLeftSideElements = document.getElementsByClassName('mainLeftSideElement');
+        let mainRightSideElements = document.getElementsByClassName('mainRightSideElement');
+
+        for (const mainLeftSideElement of mainLeftSideElements) {
+            mainLeftSideElement.style = "";
+        }
+
+        for (const mainRightSideElement of mainRightSideElements) {
+            mainRightSideElement.style = "";
+        }
+
+        let first = document.getElementById('first');
+
+        setTimeout(function(){
+            
+            first.style.opacity = "0";
+            first.style = ""
+        }, 100)
+    }
+
+    // This is for my first about us
+    function showSecondmainLeftSideElement(){
+        let mainLeftSideElements = document.getElementsByClassName('secondMainLeftSideElement');
+
+        let time = 500;
+
+        for (const mainLeftSideElement of mainLeftSideElements) {
+            setTimeout(function(){
+                mainLeftSideElement.style.right = "0px";
+            }, time);
+            time += 125;
+        
+        }
+    }
+
+
+    function showSecondmainRightSideElement(){
+        let mainRightSideElements = document.getElementsByClassName('secondMainRightSideElement');
+
+        let time = 750;
+
+        for (const mainRightSideElement of mainRightSideElements) {
+            setTimeout(function(){
+                mainRightSideElement.style.left = "0px";
+            }, time);
+            time -= 125;
+        }
+    }
+
+    function removeStylingSecond(){
+        let mainLeftSideElements = document.getElementsByClassName('secondMainLeftSideElement');
+        let mainRightSideElements = document.getElementsByClassName('secondMainRightSideElement');
+
+        for (const mainLeftSideElement of mainLeftSideElements) {
+            mainLeftSideElement.style = "";
+        }
+
+        for (const mainRightSideElement of mainRightSideElements) {
+            mainRightSideElement.style = "";
+        }
+
+        let second = document.getElementById('second');
+
+        setTimeout(function(){
+            second.style = "";
+        }, 200)
+
+        
+    }
+
+
+    function aboutUsSecond(){
+        showSecondmainLeftSideElement();
+        showSecondmainRightSideElement();
+
+        let second = document.getElementById('second');
+
+        setTimeout(function(){
+            second.style.transform = "scale(1)";
+        }, 200)
+    }
+
+
+    function aboutUSAnimation(){
+        let first = document.getElementById('first');
+
+        setTimeout(function(){
+            
+            first.style.opacity = "1";
+            first.style.top = "0px";
+        }, 200)
+
+        showLinks();
+
+        showleftSideElement();
+
+        showmainLeftSideElement();
+
+        showmainRightSideElement();
+    }
+
+    // aboutUSAnimation();
+
+
+    function contactUsAnimationLeft(){
+        let leftSideContacts = document.getElementsByClassName('leftSideContact');
+
+        let time = 750;
+
+        for (const leftSideContact of leftSideContacts) {
+            setTimeout(function(){
+                leftSideContact.style.left = "0px";
+            }, time);
+            time -= 125;
+        }
+    }
+
+    function contactUsAnimationRight(){
+        let rightSideContacts = document.getElementsByClassName('rightSideContact');
+
+        let time = 750;
+
+        for (const rightSideContact of rightSideContacts) {
+            setTimeout(function(){
+                rightSideContact.style.right = "0px";
+            }, time);
+            time -= 125;
+        }
+    }
+
+    function removeStylingContact(){
+        let leftSideContacts = document.getElementsByClassName('leftSideContact');
+        let rightSideContacts = document.getElementsByClassName('rightSideContact');
+
+        for (const leftSideContact of leftSideContacts) {
+            leftSideContact.style = "";
+        }
+
+        for (const rightSideContact of rightSideContacts) {
+            rightSideContact.style = "";
+        }
+
+        let contactUS = document.getElementById("contactUS");
+
+        setTimeout(function(){
+            contactUS.style = "";
+        }, 100);
+    }
+
+    function contactUsAnimation(){
+        contactUsAnimationLeft();
+        contactUsAnimationRight();
+
+        let contactUS = document.getElementById("contactUS");
+
+        setTimeout(function(){
+            contactUS.style.bottom = "0px";
+        }, 500);
+    }
+
+
+    // Information SOLON 
+
+    function showInformationLeft(){
+        let infoLefts = document.getElementsByClassName('infoLeft');
+
+        let time = 750;
+
+        for (const infoLeft of infoLefts) {
+            setTimeout(function(){
+                infoLeft.style.left = "0px";
+            }, time);
+            time -= 125;
+        }
+    }
+
+    function showInformationRight(){
+        let infoRights = document.getElementsByClassName('infoRight');
+
+        let time = 500;
+
+        for (const infoRight of infoRights) {
+            setTimeout(function(){
+                infoRight.style.right = "0px";
+            }, time);
+            time += 125;
+        }
+    }
+
+    function showInformation(){
+        showInformationLeft();
+        showInformationRight();
+
+
+    }
+
+    function showLeftRight(elem){
+        elem.parentElement.parentElement.children[0].style.filter = "blur(20px)";
+        elem.parentElement.parentElement.children[1].style.filter = "blur(20px)";
+    
+
+        let aboutMeLeft = document.getElementById('aboutMeLeft');
+        let aboutMeRight = document.getElementById('aboutMeRight');
+
+        let toAbsolute = document.getElementById('toAbsolute');
+
+        toAbsolute.style.top = '0px';
+
+        setTimeout(function(){
+            aboutMeLeft.style.top = "0px";
+            aboutMeRight.style.bottom = "0px";
+        }, 500);
+
+        setTimeout(function(){
+            showInformation();
+        }, 750);
+
+        
+    }
+
+    function removeStylingInfo(elem){
+        
+
+
+        let infoLefts = document.getElementsByClassName('infoLeft');
+        let infoRights = document.getElementsByClassName('infoRight');
+        let aboutMeLeft = document.getElementById('aboutMeLeft');
+        let aboutMeRight = document.getElementById('aboutMeRight');
+
+        let toAbsolute = document.getElementById('toAbsolute');
+
+        let time = 500;
+
+        for (const infoLeft of infoLefts) {
+            setTimeout(() => {
+                infoLeft.style = "";
+            }, time);
+            time += 200;
+        }
+
+        time = 500;
+
+        for (const infoRight of infoRights) {
+            setTimeout(() => {
+                infoRight.style = "";
+            }, time);
+            time += 200;
+        }
+
+        time += 200;
+
+        setTimeout(() => {
+            aboutMeLeft.style = "";
+            aboutMeRight.style = "";
+        }, time);
+
+        time += 200;
+
+        setTimeout(() => {
+            elem.parentElement.parentElement.children[0].style.filter = "blur(0px)";
+            elem.parentElement.parentElement.children[1].style.filter = "blur(0px)";
+            toAbsolute.style = "";
+        }, time);
+
+
+    }
+
+    // Mission About ME
+
+
+    function showInformationLeft1(){
+        let infoLefts = document.getElementsByClassName('infoLeft1');
+
+        let time = 750;
+
+        for (const infoLeft of infoLefts) {
+            setTimeout(function(){
+                infoLeft.style.left = "0px";
+            }, time);
+            time -= 125;
+        }
+    }
+
+    function showInformationRight1(){
+        let infoRights = document.getElementsByClassName('infoRight1');
+
+        let time = 750;
+
+        for (const infoRight of infoRights) {
+            setTimeout(function(){
+                infoRight.style.right = "0px";
+            }, time);
+            time -= 125;
+        }
+    }
+
+    function showInformation1(){
+        showInformationLeft1();
+        showInformationRight1();
+
+
+    }
+
+    function showLeftRight1(elem){
+        elem.parentElement.parentElement.children[0].style.filter = "blur(20px)";
+        elem.parentElement.parentElement.children[1].style.filter = "blur(20px)";
+
+        let aboutMeLeft1 = document.getElementById('aboutMeLeft1');
+        let aboutMeRight1 = document.getElementById('aboutMeRight1');
+
+        let toAbsolute1 = document.getElementById('toAbsolute1');
+
+        toAbsolute1.style.top = '0px';
+
+        setTimeout(function(){
+            aboutMeLeft1.style.top = "0px";
+            aboutMeRight1.style.bottom = "0px";
+        }, 500);
+
+        setTimeout(function(){
+            showInformation1();
+        }, 750);
+
+        
+    }
+
+    function removeStylingInfo1(elem){
+        let infoLefts = document.getElementsByClassName('infoLeft1');
+        let infoRights = document.getElementsByClassName('infoRight1');
+        let aboutMeLeft = document.getElementById('aboutMeLeft1');
+        let aboutMeRight = document.getElementById('aboutMeRight1');
+
+        let toAbsolute = document.getElementById('toAbsolute1');
+
+        let time = 500;
+
+        for (const infoLeft of infoLefts) {
+            setTimeout(() => {
+                infoLeft.style = "";
+            }, time);
+            time += 200;
+        }
+
+        time = 500;
+
+        for (const infoRight of infoRights) {
+            setTimeout(() => {
+                infoRight.style = "";
+            }, time);
+            time += 200;
+        }
+
+        time += 200;
+
+        setTimeout(() => {
+            aboutMeLeft.style = "";
+            aboutMeRight.style = "";
+        }, time);
+
+        time += 200;
+
+        setTimeout(() => {
+            elem.parentElement.parentElement.children[0].style.filter = "blur(0px)";
+            elem.parentElement.parentElement.children[1].style.filter = "blur(0px)";
+            toAbsolute.style = "";
+        }, time);
+
+
+    }
+    
+
+    // ------------------------------------- for about us animation
+
+
+    // for project Section
+    let current = 0;
+    let myProjectBoxs = document.getElementsByClassName('myProjectBox');
+    let rightButton = document.getElementById('rightButton');
+    let leftButton = document.getElementById('leftButton');
+
+
+    function addLeft(){
+        for (const myProjectBox of myProjectBoxs) {
+            myProjectBox.style.left = "200dvw";
+        }
+
+        myProjectBoxs[0].style.width = "400px";
+        myProjectBoxs[0].style.height = "400px";
+        myProjectBoxs[0].style.left = "50%";
+
+        checkCurrentCount();
+
+    }
+
+    function hideButtons(){
+        rightButton.style.display = "none";
+        leftButton.style.display = "none";
+
+        setTimeout(function(){
+            rightButton.style.display = "flex";
+            leftButton.style.display = "flex";
+        }, 2000);
+    }
+
+    function addAnimation(){
+
+        hideButtons();
+        
+
+        myProjectBoxs[current].style.width = "200px";
+        myProjectBoxs[current].style.height = "200px";
+
+        setTimeout(function(){
+            myProjectBoxs[current + 1].style.left = "calc(50% + 200px)"
+        }, 500);
+
+        setTimeout(function(){
+            myProjectBoxs[current + 1].style.left = "100dvw";
+        }, 900);
+
+        setTimeout(function(){
+            myProjectBoxs[current + 1].style.left = "50%";
+        }, 1400);
+
+        setTimeout(function(){
+            myProjectBoxs[current + 1].style.width = "400px";
+            myProjectBoxs[current + 1].style.height = "400px";
+
+            console.log(current + " == " + (myProjectBoxs.length - 1));
+
+            // if(current == 3){
+            //     console.log("stop");
+            //     rightButton.style.display = "none";
+            // }
+            
+
+            if(current < (myProjectBoxs.length - 1)){
+                current++;
+                checkCurrentCount();
+            } 
+
+        }, 2000);
+
+        setTimeout(function(){
+            myProjectBoxs[current].style.left = "-100dvw";
+        }, 1600);
+
+      
+        
+
+    }
+
+    
+    function minusAnimation(){
+
+        
+        
+        hideButtons();
+
+        myProjectBoxs[current].style.width = "200px";
+        myProjectBoxs[current].style.height = "200px";
+
+        setTimeout(function(){
+            myProjectBoxs[current - 1].style.left = "calc(50% - 200px)"
+        }, 500);
+
+        setTimeout(function(){
+            myProjectBoxs[current - 1].style.left = "-100dvw";
+        }, 900);
+
+        setTimeout(function(){
+            myProjectBoxs[current - 1].style.left = "50%";
+        }, 1400);
+
+        setTimeout(function(){
+            myProjectBoxs[current - 1].style.width = "400px";
+            myProjectBoxs[current - 1].style.height = "400px";
+
+            
+
+            
+
+            if(current > 0){
+                current--;
+                if(current == 0){
+                    console.log('zero');
+                    leftButton.style.display = "none!important";
+                    leftButton.style.width  = "0px";
+                    
+                }
+                
+            }
+        }, 1900);
+
+        setTimeout(function(){
+            myProjectBoxs[current].style.left = "200dvw";
+        }, 1600);
+
+      
+
+
+        console.log(current);
+    }
+
+    function checkCurrentCount(){
+        if(current == 0){
+            leftButton.style.display = "none";
+            console.log("to hide 0");
+        }else if(current == 7){
+            rightButton.style.display = "none";
+        }else {
+            leftButton.style.display = "block";
+            rightButton.style.display = "block";
+            leftButton.style.width = "50px";
+            console.log("override");
+        }
+    }
+
+    addLeft();
+
+
+
+    // For Projects
+
+
+    // let workBoxContents = document.getElementsByClassName('workBoxContent');
+
+    // workBoxContents[0].style.top = "200px";
+
+    function addRandomColor(){
+        let workBoxs = document.getElementsByClassName('workBox');
+
+        for (const workBox of workBoxs) {
+            let color1 = Math.floor(Math.random() * 255 + 125);
+            let color2 = Math.floor(Math.random() * 255 + 125);
+            let color3 = Math.floor(Math.random() * 255 + 125);
+
+           
+            workBox.style.backgroundColor = `rgba(${color1}, ${color2}, ${color3}, 0.5)`;
+            workBox.style.boxShadow = `0px 0px 5px rgba(${color1}, ${color2}, ${color3}, 0.5)`;
+            
+
+        }
+    }
+
+
+    function randomColor(){
+        let workBoxs = document.getElementsByClassName('workBox');
+        let isTrue = true;
+
+        for (const workBox of workBoxs) {
+            let color1 = Math.floor(Math.random() * 255 + 125);
+            let color2 = Math.floor(Math.random() * 255 + 125);
+            let color3 = Math.floor(Math.random() * 255 + 125);
+
+            let sign = "";
+
+            let rotateNumber = Math.floor(Math.random() * 35);
+            // let trueOrFalse = Math.floor(Math.random() * 20);
+
+            if(isTrue){
+                sign = "";
+            }else{
+                sign = "-";
+            }
+
+            console.log(isTrue);
+
+            workBox.style.transform = `rotate(${sign}${rotateNumber}deg)`;
+
+
+            workBox.style.backgroundColor = `rgba(${color1}, ${color2}, ${color3}, 0.5)`;
+            workBox.style.boxShadow = `0px 0px 5px rgba(${color1}, ${color2}, ${color3}, 0.5)`;
+            console.log(`rgba(${color1}, ${color2}, ${color3}, 0.5)`);
+
+            isTrue = !isTrue;
+        }
+    }
+
+
+    function addRotateAnimation(){
+        let workBoxs = document.getElementsByClassName('workBox');
+
+        let myOptions = ["top", "right", "bottom", "left"];
+        let current = 0;
+
+        for (const workBox of workBoxs) {
+            if(current == 4){
+                current = 0;
+            }
+            eval(`workBox.style.${myOptions[current]} = '-100dvw'`);
+            current++;
+        }
+    }
+
+    function removeRelative(elem){
+        elem.style.display = "none";
+
+        let workBoxs = document.getElementsByClassName('workBox');
+
+        let myOptions = ["top", "right", "bottom", "left"];
+        let current = 0;
+
+
+        let time = 500;
+
+        for (const workBox of workBoxs) {
+            
+            setTimeout(function(){
+                if(current == 4){
+                    current = 0;
+                }
+                eval(`workBox.style.${myOptions[current]} = '0'`);
+                // setTimeout(function(){
+                //     workBox.style.transform = "rotate(0deg)";
+                // }, 250);
+                current++;
+            }, time);
+            time += 500;
+        }
+
+        time += 250;
+
+        setTimeout(function(){
+            lineUp();
+        }, time)
+    }
+
+
+    function lineUp(){
+        let workBoxs = document.getElementsByClassName('workBox');
+
+        let time = 500;
+        let currentMargin = 20;
+        let targetElement = 0;
+        let current = 0;
+        
+
+        for (const workBox of workBoxs) {
+            console.log("Target : " + workBoxs.length - 1 + " == " + targetElement);
+            
+            setTimeout(function(){
+
+                if(current == 4){
+                    current = 0;
+                }
+                // eval(`workBox.style. = 'margin-left: ${currentMargin}px'`);
+
+                workBox.style = `transform: rotate(0deg); margin-left: ${currentMargin}px;`;
+                let color1 = Math.floor(Math.random() * 255 + 125);
+                let color2 = Math.floor(Math.random() * 255 + 125);
+                let color3 = Math.floor(Math.random() * 255 + 125);
+
+            
+                workBox.style.backgroundColor = `rgba(${color1}, ${color2}, ${color3}, 0.5)`;
+                workBox.style.boxShadow = `0px 0px 5px rgba(${color1}, ${color2}, ${color3}, 0.5)`;
+                // workBox.style.transform = `rotate(0deg)`;
+                // workBox.style.marginLeft = `${currentMargin}px`;
+                // workBox.style.right = `0`;
+
+                // setTimeout(function(){
+                //     workBox.style.transform = "rotate(0deg)";
+                // }, 250);
+                current++;
+                currentMargin += 320;
+
+                if(targetElement == (workBoxs.length - 1)){
+                    workBox.style.marginRight = '600px';
+                    console.log("I was called");
+                }
+
+               
+                
+            }, time);
+            time += 500;
+            targetElement++;
+        }
+
+        let workSectionHolder = document.getElementById('workSectionHolder');
+
+        workSectionHolder.style.overflowX = 'auto';
+
+        
+
+        addRandomColor();
+
+        
+    }
+
+    randomColor();
+
+    addRotateAnimation();
+
+
+    // Scrooll Listener 
+    window.onscroll = function() {myScrollListener()};
+
+    
+
+    let first = document.getElementById('first');
+    let second = document.getElementById('second');
+    let projectSection = document.getElementById('projectSection');
+    let workSection = document.getElementById('workSection');
+    // let projectSection = document.getElementById('projectSection');
+
+    let firstState = true ;
+    let secondState = false ;
+    let thirdState = false ;
+    let fourthState = false ;
+
+    let targetElementsArray = ['second', 'projectSection', 'workSection']
+
+
+    // let currentTargetElement = 'workSection';
+    let currentTargetElement = 0;
+    let workSectionBool = false;
+    // #workSection, #second, #projectSection, #workSection
+
+
+
+    function myScrollListener() {
+        let myScroll = document.documentElement.scrollTop;
+
+
+
+
+        console.log(myScroll + " == " +  window.innerHeight);
+
+
+        if(myScroll < (window.innerHeight / 2)){
+            // This is about us (bryan);
+            console.log("Bryan");
+            // second.style.display = "none";
+            // projectSection.style.display = "none";
+            // workSection.style.display = "none";
+            aboutUSAnimation();
+            removeStylingSecond();
+        }else if(myScroll > ( window.innerHeight / 2) && myScroll < (window.innerHeight + window.innerHeight / 2)){
+            // This is about us (second)
+            console.log("Second");
+            aboutUsSecond();
+            removeStylingFirst();
+
+            projectSection.style = "";
+            // projectSection.style.display = "none";
+            // workSection.style.display = "none";
+        }else if(myScroll > ( window.innerHeight + window.innerHeight / 2) && myScroll < ((window.innerHeight * 2) + window.innerHeight / 2)){
+            // This is about us (second)
+            console.log("Third");
+            removeStylingSecond();
+            projectSection.style.left = "0";
+            workSection.style ="";
+            // addRotateAnimation();
+            // workSection.style.display = "none";
+        }else if(myScroll > ((window.innerHeight * 2) + window.innerHeight / 2) && myScroll < ((window.innerHeight * 3) + window.innerHeight / 2)){
+            // This is about us (second)
+            console.log("Fourth");
+            projectSection.style = "";
+            workSection.style.right ="0";
+            removeStylingContact();
+        }else if(myScroll > ((window.innerHeight * 3) + window.innerHeight / 2) && myScroll < ((window.innerHeight * 4) + window.innerHeight / 2)){
+            // This is about us (second)
+            console.log("Fifth");
+            workSection.style ="";
+            contactUsAnimation();
+            
+        }
+
+     
+
+        // This is the same
+        // console.log(window.innerHeight)
+        // console.log(document.getElementsByTagName('main')[0].clientHeight);
+        
+        // Reach bottom
+        // console.log(document.body.clientHeight - window.innerHeight) 
+
+        console.log(document.documentElement.scrollTop + " == " +  document.body.clientHeight - window.innerHeight)
+        if (document.documentElement.scrollTop  ==  document.body.clientHeight - window.innerHeight) {
+            console.log("here");
+
+           
+
+            if(targetElementsArray[currentTargetElement] == "second"){
+                eval(`document.getElementById("${targetElementsArray[currentTargetElement]}").style.display = 'flex'`);
+            }else{
+                eval(`document.getElementById("${targetElementsArray[currentTargetElement]}").style.display = 'block'`);
+            }
+
+            
+
+            if( currentTargetElement == "workSection"){
+                workSectionBool = true;
+            }
+
+                currentTargetElement++;
+
+           
+        }
+    }
+
+
+    // my loader--------------------------------------------
+
+    let myAnimation = document.getElementById("myAnimation");
+          let spans = myAnimation.getElementsByTagName("span");
+          let myLoader = document.getElementById("myLoader");
+        //   let toClick = document.getElementById("toClick");
+          let wholeContent = document.getElementById("wholeContent");
+        //   let linkClicker = document.getElementById('linkClicker');
+
+          let previousY = 0;
+        //   let navbar = document.getElementById("navbar");
+          let sticky;
+        //   let toTop = document.getElementById("toTop");
+
+          let timeInterval;
+
+          let tdLength = spans.length;
+          let totalCalls = 1;
+          let times = 1;
+          for (let td of spans) {
+               timeInterval = setInterval(function () {
+                    animate1 = setTimeout(function () {
+                         let firstParameter = Math.floor(
+                              Math.random() * 255 + 1
+                         );
+                         let secondParameter = Math.floor(
+                              Math.random() * 255 + 1
+                         );
+                         let thirdParameter = Math.floor(
+                              Math.random() * 255 + 1
+                         );
+                         if(firstParameter < 255 / 2){
+                              firstParameter += 50;
+                         }
+                         if(secondParameter < 255 / 2){
+                              secondParameter += 50;
+                         }
+                         if(thirdParameter < 255 / 2){
+                              thirdParameter += 50;
+                         }
+                         td.style.padding = `20px 0px`;
+                         setTimeout(function () {
+                              td.style.padding = `0px 0px`;
+                         }, 100);
+                         td.style.background = `rgba(${firstParameter},${secondParameter},${thirdParameter}, 0.4)`;
+                         td.style.boxShadow = `0px 0px 20px rgba(${firstParameter},${secondParameter},${thirdParameter}, 0.4)`;
+                         td.style.color = `rgba(${firstParameter},${secondParameter},${thirdParameter}, 1)`;
+                         td.style.textShadow = `0px 0px 10px rgba(${firstParameter},${secondParameter},${thirdParameter}, 0.7)`;
+                        td.style.transform = "translateY(-30px)";
+                            setTimeout(function(){
+                            td.style.transform = "translateY(0px)";
+                         }, 200)
+                         totalCalls++;
+                         // 42
+                         if (totalCalls == 12) {
+                              stop();
+                              
+                         }
+                    }, 150 * times);
+                    times++;
+               }, tdLength * 150);
+          }
+
+          function stop() {
+              aboutUSAnimation();
+               myLoader.style.height = "0px";
+               wholeContent.style.display = "block";
+               window.clearInterval(timeInterval);
+            //    linkClicker.click();
+            //    sticky = navbar.offsetTop;
+          }
+
+
+        //   --------------------------------------------
+
+
+        // let workSectionHolder = document.getElementById('workSectionHolder');
+
+        workSectionHolder.onscroll = function(){
+            myScrollListenerWork(this);
+        }
+
+        function myScrollListenerWork(elem){
+            let myScroll = elem.scrollLeft;
+
+            let workBoxs = document.getElementsByClassName('workBox');
+
+            console.log();
+
+            let targetElement = Math.round(myScroll / 300);
+
+            console.log(myScroll + ' ==  ' + targetElement);
+
+            for (const workBox of workBoxs) {
+                workBox.style.transform = "scale(1)";
+            }
+
+            workBoxs[targetElement].style.transform = "scale(1.2)";
+
+
+        }
+// ------------------------------------------------------------
+
+
+
+
+</script>
+</html>
