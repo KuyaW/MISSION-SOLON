@@ -1,0 +1,890 @@
+@font-face {
+    font-family: Poppins;
+    src: url(./Font/Poppins-Bold.ttf);
+}
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Poppins, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+background-image: url(./Pic/b1.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+
+header{
+display: flex;
+justify-content: space-between;
+padding: 10px;
+/* background-color: lightblue; */
+background-color: rgba(255, 255, 255, 0.3);
+box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+backdrop-filter: blur(10px);;
+}
+
+
+/* Left Side */
+header > .leftSide {
+display: flex;
+align-items: center;
+}
+
+
+header > .leftSide > .imgHolder{
+height: 50px;
+width: 50px;
+background-color: grey;
+border-radius: 50%;
+margin-right: 10px;
+background-image: url(./Pic/solon.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.leftSideElement{
+position: relative;
+top: -100px;
+transition: .4s ease;
+}
+
+
+/* Right Side */
+
+header > .rightSide > nav {
+ display: flex;
+ align-items: center;
+ height: 100%;
+}
+
+header > .rightSide > nav > a {
+display: block;
+text-decoration: none;
+padding: 8px 10px;
+margin-right: 10px;
+color: black;
+position: relative;
+top: -50px;
+transition: .4s ease;
+position: relative;
+overflow: hidden;
+}
+
+header > .rightSide > nav > a > .aSpan{
+content : '';
+position: absolute;
+width: 100%;
+height: 0%;
+background-color: rgba(0,0,0,0.5);
+transition: .4s ease;
+top: 0;
+left: 0;
+z-index: -1;
+}
+
+header > .rightSide > nav > a:hover  .aSpan{
+
+height: 100%;
+}
+
+
+
+header > .rightSide > nav > a:hover{
+background-color: rgba(0,0,0,0.5);
+color: white;
+}
+
+
+/* Main */
+
+main{
+display: flex;
+
+background-color: rgba(255, 255, 255, 0.3);
+box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+backdrop-filter: blur(10px);;
+/* margin: 100px; */
+height: calc(100dvh - 200px);
+margin: 99px;
+width: 80dvw;
+margin: 100px auto;
+/* height:100dvh; */
+border-radius: 10px;
+
+
+}
+
+main > .leftSide{
+/* background-color: red; */
+width: 50%;
+/* height: 100dvh; */
+height: 100%;
+display: grid;
+place-items: center;
+overflow: hidden;
+
+}
+
+main > .leftSide > .imageHolder {
+height: 30dvw;
+aspect-ratio: 1;
+background-color: grey;
+border-radius: 50%;
+}
+
+main > .rightSide {
+width: 50%;
+/* height: 100dvh; */
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 20px;
+overflow-x: hidden;
+
+
+/* align-items: center; */
+}
+
+main > .rightSide > h1{
+width: 100%;
+/* background-color: red; */
+padding-left: 0px;
+font-size: 4em;
+margin-bottom: 20px;
+text-indent: 0!important;
+}
+
+main > .rightSide > button{
+background-image: linear-gradient(90deg, red, magenta);
+outline: none;
+border: none;
+padding: 10px;
+width: max-content;
+margin-top: 20px;
+}
+
+.mainLeftSideElement{
+position: relative;
+left: -50dvw;
+transition: .4s ease;
+}
+
+.mainRightSideElement{
+position: relative;
+right: -50dvw;
+transition: .4s ease;
+text-align: justify;
+text-indent: 20px;
+}
+
+
+
+.secondMainLeftSideElement{
+position: relative;
+right: -50dvw;
+transition: .4s ease;
+}
+
+.secondMainRightSideElement{
+position: relative;
+left: -50dvw;
+text-align: justify;
+transition: .4s ease;
+}
+
+.rightSideContact{
+position: relative;
+right: -50dvw;
+transition: .4s ease;
+}
+
+.leftSideContact{
+position: relative;
+left: -50dvw;
+transition: .4s ease;
+}
+
+.infoRight{
+position: relative;
+right: -50dvw;
+transition: .4s ease;
+}
+
+.infoLeft{
+position: relative;
+left: -50dvw;
+transition: .4s ease;
+}
+
+.infoRight1{
+position: relative;
+right: -50dvw;
+transition: .4s ease;
+}
+
+.infoLeft1{
+position: relative;
+left: -50dvw;
+transition: .4s ease;
+}
+
+
+.toAbsolute .leftSide{
+position: relative;
+top: -100dvh;
+transition: .4s ease;
+}
+
+.toAbsolute .rightSide{
+position: relative;
+bottom: -100dvh;
+transition: .4s ease;
+}
+
+/* project section */
+
+.projectSection{
+position: relative;
+left: -100dvw;
+transition: .4s ease;
+width: 80dvw;
+margin: 0 auto;
+border-radius: 10px;
+overflow: hidden;
+
+
+}
+.projectSection > h1{
+font-size: 2.5em;
+text-align: center;
+color: white;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 2;
+}
+
+.projectSectionHolder{
+height: 90dvh;
+background-color: rgba(255, 255, 255, 0.3);
+box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+backdrop-filter: blur(10px);;
+/* background: red; */
+/* width: 100%; */
+position: relative;
+overflow-x: hidden;
+}
+
+.projectSectionHolder > .myProjectBox{
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 200px;
+height: 200px;
+/* background-color: lightblue; */
+background-color: rgba(255, 255, 255, 0.7);
+backdrop-filter: blur(10px);
+transition: .4s ease;
+PADDING: 10px;
+
+}
+
+.projectSectionHolder > .leftButton{
+position: absolute;
+height: 50px;
+width: 50px;
+top: 50%;
+left: 0px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2em;
+transition: .4s ease;
+}
+
+.projectSectionHolder > .leftButton  i{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.3);
+border-radius: 50%;
+}
+
+.projectSectionHolder > .leftButton  i:hover{
+background-color: rgba(0, 0, 0, 0.5);
+color:white;
+}
+
+.projectSectionHolder > .rightButton{
+position: absolute;
+height: 50px;
+width: 50px;
+
+top: 50%;
+right: 0px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2em;
+transition: .4s ease;
+}
+
+.projectSectionHolder > .rightButton  i{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+width: 100%;
+background-color: rgba(0, 0, 0, 0.3);
+border-radius: 50%;
+}
+
+.projectSectionHolder > .rightButton i:hover{
+background-color: rgba(0, 0, 0, 0.5);
+color:white;
+}
+
+#workSection{
+position: relative;
+right: -100dvw;
+transition: .4s ease;
+overflow: hidden!important;
+/* width: 100; */
+/* border: 2px solid black; */
+
+margin: 100px;
+background-color: rgba(255, 255, 255, 0.3);
+box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+backdrop-filter: blur(10px);;
+border-radius: 10px;
+}
+
+#workSection > h1{
+font-size: 2.5em;
+text-align: center;
+color: white;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 2;
+} 
+
+#workSection button{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 10;
+
+padding: 10px 12px;
+font-weight: bold;
+background-image: linear-gradient(90deg, magenta, red);
+border: none;
+font-size: 2.5em;
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+transition: .4s ease;
+}
+
+#workSection button:hover{
+background-image: linear-gradient(90deg, rgba(255, 0, 255, 0.8), rgba(255, 0, 0, 0.8));
+}
+
+#workSection button:active{
+background-image: linear-gradient(90deg, rgba(255, 0, 255, 0.5), rgba(255, 0, 0, 0.5));
+border: 2px solid magenta;
+
+}
+
+.workSectionHolder{
+height: 90dvh;
+/* background-color: lightcyan; */
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+
+.workSectionHolder > .workBoxHolder {
+width: 300px;
+height: 400px;
+/* background-color: lightblue; */
+position: relative;
+}
+
+.workSectionHolder > .workBoxHolder > .workBox{
+position: absolute;
+width: 100%;
+height: 100%;
+transition: .4s ease;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.workSectionHolder > .workBoxHolder > .workBox > img{
+width: 100%;
+height: auto;
+}
+
+
+
+
+
+
+
+#first{
+opacity: 0.1;
+transition: 1s ease-in-out;
+position: relative;
+top: -100dvh;
+}
+
+
+
+
+.second{
+flex-direction: row-reverse;
+transition: .4s ease;
+transform: scale(0);
+position: relative;
+overflow: hidden;
+}
+
+.toAbsolute{
+position: absolute;
+height: 100%;
+width: 100%;
+background-color: rgba(255, 255, 255, 0.3);
+padding: 10px 50px;
+top: -100dvh;
+transition: .4s ease;
+overflow: hidden;
+backdrop-filter: blur(20px);
+border-radius: 10px;
+        /* position: relative; */
+}
+
+.btnAbsolute{
+position: absolute;
+left: 10px;
+top: 10px;
+width: 50px;
+height: 50px;
+background-color: rgba(0, 0, 0, 0.6);
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2em;
+border-radius: 10px;
+transition: .4s ease;
+
+}
+
+.btnAbsolute:hover{
+border-radius: 50%;
+color: white;
+}
+
+
+.toAbsolute > h1{
+text-align: center;
+font-size: 2.5em;
+}
+
+.toAbsoluteContent {
+display: flex;
+height: 90%;
+width: 80%;
+margin: 0 auto;
+overflow: hidden;
+}
+
+.toAbsolute  .rightSide{
+width: 50%;
+height: 100%;
+/* background-color: lightblue; */
+background-color: rgba(255, 255, 255, 0.3);
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 10px;
+overflow: hidden;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+
+}
+
+.toAbsolute  .leftSide{
+width: 50%;
+height: 100%;
+/* background-color: lightgreen; */
+background-color: rgba(255, 255, 255, 0.3);
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 10px;
+overflow: hidden;
+border-top-left-radius: 10px;
+border-bottom-left-radius: 10px;
+
+}
+
+.toAbsolute .infoHolder {
+padding: 8px 10px;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+border: 1px solid rgba(0, 0, 0, 0.09);
+margin-bottom: 20px;
+background-color: rgba(255, 255, 255, 0.2);
+border-radius: 5px;
+text-wrap: wrap;
+}
+
+
+/* <!-- My loader --> */
+
+.myAnimation {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+flex-wrap: wrap;
+}
+.myAnimation span {
+font-family: Poppins, "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+font-weight: 800;
+font-size: 6em;
+margin-right: 25px;
+text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+transition: 500ms ease-out;
+border-radius: 50%;
+width: 100px;
+height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+user-select: none;
+
+}
+.myLoader {
+width: 100%;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgba(0, 0, 0, 0.7);
+overflow: hidden;
+backdrop-filter: blur(3px);
+}
+
+#wholeContent {
+display: none;
+overflow:hidden
+}
+
+#first{
+transition: .4s ease-in-out!important;
+}
+
+.invisible{
+visibility: hidden!important;
+}
+
+.iFrameSection{
+position: relative;
+height: 50dvh;
+overflow: auto;
+}
+
+.iFrameSection > .iframeHolder   {
+position: absolute;
+height: 90%;;
+width: 90dvw;
+background-color: lightpink;
+border-radius: 10px;
+}
+
+
+/* Contact US */
+
+.contactUS{
+    height: 90dvh;
+    width: 80dvw;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);;
+    border-radius: 10px;
+
+    position: relative;
+    bottom: -100dvh;
+    transition: .4s ease;
+
+    overflow: hidden;
+}
+.contactUS > h1{
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.contactUS > .contactUsContent{
+    display: flex;
+    overflow: hidden;
+}
+
+.contactUS > .contactUsContent > .leftSide{
+    width: 50%;
+    height: 90dvh;
+    /* background-color: lightgreen; */
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactUS > .contactUsContent > .leftSide > iframe{
+    width: 50%;
+    aspect-ratio: 1;
+    background-color: grey;
+}
+
+.contactUS > .contactUsContent > .rightSide{
+    width: 50%;
+    height: 90dvh;
+    /* background-color: lightgreen; */
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* .contactUS > .contactUsContent > .rightSide > h1{
+    width: 100%;
+    text-align: left;
+} */
+
+.contactUS > .contactUsContent > .rightSide > form{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.511);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    backdrop-filter: blur(10px);
+    max-width: 400px;
+}
+
+.contactUS > .contactUsContent > .rightSide > form input[type = email],
+.contactUS > .contactUsContent > .rightSide > form textarea {
+    padding: 8px 10px;
+    border: none;
+    /* border-bottom: 2px solid red; */
+    background: rgba(128, 128, 128, 0.224);
+
+}
+
+.contactUS > .contactUsContent > .rightSide > form input[type = submit]{
+    background-color: rgba(0,0,0,0.3);
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 8px 10px;
+    margin-top: 20px;
+    border: none;
+    background-image: linear-gradient(90deg, red, magenta);
+}
+
+.contactUS > .contactUsContent > .rightSide > form input[type = submit]:hover{
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+}
+
+
+.contactUS > .contactUsContent > .leftSide > iframe{
+    width: 600px ;
+    height: 450px ;
+}
+
+textarea{
+    height: 200px
+}
+
+footer{
+    text-align: center;
+}
+
+
+.youtube{
+    width: max-content;
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    background-color: rgba(247, 213, 218, 0.697);
+    backdrop-filter: blur(4px);
+}
+
+.imageMap{
+    width: max-content;
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    background-color: rgba(247, 213, 218, 0.697);
+    backdrop-filter: blur(4px);
+}
+
+.entities{
+    width: 400px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    padding: 10px;
+    background-color: rgba(247, 213, 218, 0.697);
+    backdrop-filter: blur(4px);
+}
+
+#bryanPic{
+    background-image: url(./Pic/profile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+}
+
+#missionPic{
+    background-image: url(./Pic/mission.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+}
+
+
+.projectSectionHolder > .myProjectBox > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.second .rightSide{
+    padding-left: 50px;
+}
+
+.second .rightSide h1{
+    font-size: 3.7em
+
+}
+
+.secondMainRightSideElement{
+    text-indent: 20px;
+}
+
+@media only screen and (max-width : 600px){
+main{
+    flex-direction: column;
+    width: 90dvw;
+    /* height: max-content; */
+}
+
+main .leftSide, main .rightSide{
+    width: 100%;
+}
+
+main > .rightSide > h1{
+    font-size: 2.5em;
+}
+
+.myAnimation span{
+    height: 50px;
+    width: 50px;
+    font-size: 2.5em;
+    margin-right: 5px;
+}
+
+section.leftSide{
+    overflow: visible;
+}
+
+main > .leftSide > .imageHolder{
+    width: 300px;
+    height: 300px;
+    margin-top: 70px;
+}
+
+#second{
+    flex-direction: column;
+}
+
+#second > .rightSide > h1{
+    font-size: 2.5em;
+    text-align: left;
+}
+
+#second > .rightSide{
+    padding: 20px;
+
+}
+
+.toAbsoluteContent {
+    width: 100%;
+}
+
+.toAbsolute{
+    padding: 0!important;
+}
+
+.toAbsoluteContent .rightSide{
+    padding: 0px!important;
+}
+
+.projectSection{
+    width: 90dvw;
+}
+#workSection{
+    width: 90dvw;
+    margin: 0 auto;
+}
+
+.contactUS{
+    width: 90dvw;
+}
+
+.contactUsContent{
+    flex-direction: column;
+}
+
+.contactUsContent  .leftSide{
+    height: 50%!important;
+    justify-content: center;
+    width: 100%!important;
+}
+
+.contactUsContent  .rightSide{
+    height: max-content!important;
+    justify-content: center;
+    width: 100%!important;
+}
+
+.contactUS > .contactUsContent > .leftSide > iframe{
+    width: 60%;
+    height: 50%;
+}
+}
