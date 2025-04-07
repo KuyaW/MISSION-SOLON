@@ -7,6 +7,7 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 font-family: Poppins, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+scroll-behavior: smooth;
 }
 
 body{
@@ -194,7 +195,7 @@ transition: .4s ease;
 .secondMainRightSideElement{
 position: relative;
 left: -50dvw;
-text-align: justify;
+/* text-align: justify; */
 transition: .4s ease;
 }
 
@@ -488,6 +489,7 @@ align-items: center;
 font-size: 2em;
 border-radius: 10px;
 transition: .4s ease;
+z-index: 10;
 
 }
 
@@ -797,94 +799,174 @@ footer{
     text-indent: 20px;
 }
 
-@media only screen and (max-width : 600px){
 main{
-    flex-direction: column;
-    width: 90dvw;
-    /* height: max-content; */
+    overflow: hidden!important;
 }
 
-main .leftSide, main .rightSide{
-    width: 100%;
-}
+@media only screen and (max-width : 600px){
+    main{
+        flex-direction: column;
+        width: 95dvw;
+        /* height: max-content; */
+    }
 
-main > .rightSide > h1{
-    font-size: 2.5em;
-}
+    main .leftSide, main .rightSide{
+        width: 100%;
+        min-height: max-content;
+    }
 
-.myAnimation span{
-    height: 50px;
-    width: 50px;
-    font-size: 2.5em;
-    margin-right: 5px;
-}
+    main > .rightSide > h1{
+        font-size: 1.6em;
+    }
 
-section.leftSide{
-    overflow: visible;
-}
+    article.mainRightSideElement{
+        font-size: .9em!important;
+    }
 
-main > .leftSide > .imageHolder{
-    width: 300px;
-    height: 300px;
-    margin-top: 70px;
-}
+    /* header {
+        flex-direction: column;
+    }
 
-#second{
-    flex-direction: column;
-}
+    header nav{
+        display: flex;
+        justify-content: center;
+    } */
 
-#second > .rightSide > h1{
-    font-size: 2.5em;
-    text-align: left;
-}
+     .myLinks{
+        padding: 5px!important;
+        margin-right: 2px!important;
+     }
 
-#second > .rightSide{
-    padding: 20px;
+    .myAnimation span{
+        height: 50px;
+        width: 50px;
+        font-size: 2.5em;
+        margin-right: 5px;
+    }
 
-}
+    section.leftSide{
+        overflow: visible;
+    }
 
-.toAbsoluteContent {
-    width: 100%;
-}
+    main > .leftSide > .imageHolder{
+        width: 50dvw;
+        height: 50dvw;
+        margin-top: 70px;
+    }
 
-.toAbsolute{
-    padding: 0!important;
-}
+    #second{
+        flex-direction: column;
+    }
 
-.toAbsoluteContent .rightSide{
-    padding: 0px!important;
-}
+    #second > .rightSide > h1{
+        font-size: 2.5em;
+        text-align: left;
+    }
 
-.projectSection{
-    width: 90dvw;
-}
-#workSection{
-    width: 90dvw;
-    margin: 0 auto;
-}
+    #second > .rightSide{
+        padding: 20px;
 
-.contactUS{
-    width: 90dvw;
-}
+    }
 
-.contactUsContent{
-    flex-direction: column;
-}
+    .toAbsoluteContent {
+        width: 100%;
+    }
 
-.contactUsContent  .leftSide{
-    height: 50%!important;
-    justify-content: center;
-    width: 100%!important;
-}
+    .toAbsolute{
+        padding: 0!important;
+    }
 
-.contactUsContent  .rightSide{
-    height: max-content!important;
-    justify-content: center;
-    width: 100%!important;
-}
+    .toAbsoluteContent .rightSide{
+        padding: 0px!important;
+    }
 
-.contactUS > .contactUsContent > .leftSide > iframe{
-    width: 60%;
-    height: 50%;
-}
+    .projectSection{
+        width: 95dvw;
+    }
+    #workSection{
+        width: 95dvw;
+        margin: 0 auto;
+    }
+
+    .contactUS{
+        width: 95dvw;
+    }
+
+    .contactUsContent{
+        flex-direction: column;
+    }
+
+    .contactUsContent  .leftSide{
+        height: 50%!important;
+        justify-content: center;
+        width: 100%!important;
+    }
+
+    .contactUsContent  .rightSide{
+        height: max-content!important;
+        justify-content: center;
+        width: 100%!important;
+    }
+
+    .contactUS > .contactUsContent > .leftSide > iframe{
+        width: 60%;
+        height: 50%;
+    }
+
+    .projectSectionHolder > .myProjectBox{
+        width: 50dvw!important;
+        height: 50dvw!important;
+
+    }
+
+    .projectSection > h1{
+        margin-top: 10px;
+        font-size: 1.5em!important;
+    }
+
+    .myProjectBox > h1{
+        font-size: 1em!important;
+    }
+
+    h1.secondMainRightSideElement{
+        font-size: 1.5em!important;
+    }
+    article.secondMainRightSideElement{
+        font-size: .9em!important;
+    }
+
+    .infoHolder {
+        font-size: .8em!important;
+        height: 50px;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        text-align: left;
+        
+    }
+
+    .workSection > button{
+        font-size: 1.5em!important;
+    }
+
+    section h1{
+        font-size: 1.5em!important;
+    }
+
+    h1.leftSideContact, h1.rightSideContact{
+        font-size: 1.3em!important;
+    }
+
+    form{
+        height: 40dvh!important;
+    }
+
+    .workSection > h1{
+        font-size: 2em!important;
+    }
+
+    .workBox {
+        width: 60dvw!important;
+        height: 70dvw!important;
+    }
 }
