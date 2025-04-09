@@ -979,4 +979,8 @@ main{
         width: 60dvw!important;
         height: 70dvw!important;
     }
+
+    header div p{
+        font-size: 0.8em!important;
+    }
 }
